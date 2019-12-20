@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+Poll.destroy_all
+
+aateachers = User.create([{username: 'Oliver Ball'}, {name: 'Alex'}, {name: 'John'}])
+
+poll1 = Poll.create(title: "Which TA is best?", author_id: aateachers.first)
+poll2 = Poll.create(title: "What color is the skey?", author_id: aateachers.second)
+
